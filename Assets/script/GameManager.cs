@@ -41,29 +41,6 @@ public class GameManager : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            this.positionLvl += vectorDeltaLvl;
-            camera.transform.position = Vector3.Lerp(camera.transform.position, camera.transform.position + vectorDeltaLvl, speedCamera);
-
-            this.nextNextLvl = this.generateLvl.generateLvl(lvl, positionLvl + Vector3.forward);
-
-            prefabs.Add(this.nextNextLvl);
-            deleteTableOld();
-            activeTablesCurrenet();
-            /*
-            this.nextNextLvl.GetComponent<TableKey>().isActive = false;
-            prefabs[1].GetComponent<TableKey>().isActive = true;
- 
-            prefabs[0].GetComponent<TableKey>().isActive = false;
-            //Invoke("deleteTableOld", 1f);
-            */
-        }
-    }
-
 
     private void deleteTableOld()
     {
@@ -75,7 +52,15 @@ public class GameManager : MonoBehaviour
 
     public void generateTableRoots()
     {
+        this.positionLvl += vectorDeltaLvl;
+        camera.transform.position = Vector3.Lerp(camera.transform.position, camera.transform.position + vectorDeltaLvl, speedCamera);
 
+        this.nextNextLvl = this.generateLvl.generateLvl(lvl, positionLvl + Vector3.forward);
+
+        prefabs.Add(this.nextNextLvl);
+        deleteTableOld();
+        activeTablesCurrenet();
+        this.lvl++;
     }
 
     public void activeTablesCurrenet()

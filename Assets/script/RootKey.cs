@@ -42,13 +42,13 @@ public class RootKey : MonoBehaviour
         if (forceRoot > 0)
         {
             forceRoot--;
-            Debug.Log(forceRoot);
         }
         sprite.sprite = GameManager.instance.spriteRoot2;
 
         if (forceRoot == 0)
         {
             sprite.sprite = GameManager.instance.spriteUpRoot;
+            transform.parent.GetComponent<TableKey>().nRoots--;
             this.isUpRoot = true;
             this.isRoot = false;
         }

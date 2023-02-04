@@ -15,9 +15,9 @@ public class TableKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (nRoots == 0)
+        if (nRoots == 0 && isActive)
         {
-            //TODO:
+            GameManager.instance.generateTableRoots();
         }
     }
 }

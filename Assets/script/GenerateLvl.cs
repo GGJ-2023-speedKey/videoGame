@@ -6,13 +6,12 @@ public class GenerateLvl : MonoBehaviour
 {
     public GameObject gameObject;
 
-    public int randomRoots = 10, randomForceRoots = 10;
+    public int minForceRoot = 1, MaxForceRoot = 10;
 
-
+    public int NRoots;
 
 
     private GameObject current;
-    private int nLvl;
     private RootKey rootKey = null;
 
     private Transform[] keys = null;
@@ -24,29 +23,14 @@ public class GenerateLvl : MonoBehaviour
     public GameObject generateLvl(int lvl, Vector3 positionLvl)
     {
         current = (GameObject)Instantiate(gameObject, positionLvl, Quaternion.identity); ;
-        Transform[] rows = null;
-        rows = current.GetComponentsInChildren<Transform>();
-        foreach (Transform key in rows)
+        Transform[] rows = current.GetComponentsInChildren<Transform>();
+        int nRoots = getNRootsForLvl(GameManager.instance.lvl);
+        current.GetComponent<TableKey>().nRoots = nRoots;
+        List<int> listPosRoots = getKeysRoots(nRoots, rows.Length);
+
+        foreach (int i in listPosRoots)
         {
-
-            Debug.Log("key " + key.ToString());
-            try
-            {
-                int random = Random.Range(0, 100);
-
-                if (random % 2 == 0)
-                {
-                    updateRootKey(key.gameObject, lvl);
-                }
-                else
-                {
-                    blankKey(key.gameObject);
-                }
-            }
-            catch (System.Exception e)
-            {
-                Debug.Log(e);
-            }
+            updateRootKey(rows[i], GameManager.instance.lvl);
 
         }
 
@@ -54,19 +38,40 @@ public class GenerateLvl : MonoBehaviour
         return current;
     }
 
-    private void blankKey(GameObject gameObject)
+    private void blankKey(Transform gameObject)
     {
         rootKey = gameObject.GetComponent<RootKey>();
         rootKey.isRoot = false;
     }
 
-    void updateRootKey(GameObject gameObject, int lvl)
+    void updateRootKey(Transform gameObject, int lvl)
     {
-        Debug.Log("updateRootKey");
-        int force = Random.Range(0, 2 * lvl);
+        int force = Random.Range(minForceRoot, MaxForceRoot);
         rootKey = gameObject.GetComponent<RootKey>();
         rootKey.isRoot = true;
         rootKey.forceRoot = force;
+    }
+
+    int getNRootsForLvl(int lvl)
+    {
+        return NRoots * lvl;
+    }
+
+    List<int> getKeysRoots(int nRoots, int nKeys)
+    {
+        List<int> result = new List<int>();
+        int random = 0;
+        while (result.Count < nRoots)
+        {
+            random = Random.Range(0, nKeys);
+            if (!result.Contains(random))
+            {
+                result.Add(random);
+            }
+
+        }
+        return result;
+
     }
 
 
