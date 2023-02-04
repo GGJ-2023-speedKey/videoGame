@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class gameManager : MonoBehaviour
+public class GameManager : MonoBehaviour
 {
-
-    public static gameManager instance;
+    public static GameManager instance;
     public Sprite spriteRoot;
+    public Sprite spriteRoot2;
     public Sprite spriteVoid;
     public Sprite spriteError;
     public Sprite spriteUpRoot;
