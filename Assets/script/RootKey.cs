@@ -39,8 +39,11 @@ public class RootKey : MonoBehaviour
 
     void upRoot()
     {
-        forceRoot--;
-        Debug.Log(forceRoot);
+        if (forceRoot > 0)
+        {
+            forceRoot--;
+            Debug.Log(forceRoot);
+        }
         sprite.sprite = GameManager.instance.spriteRoot2;
 
         if (forceRoot == 0)

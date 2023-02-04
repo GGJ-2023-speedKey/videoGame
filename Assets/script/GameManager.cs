@@ -53,6 +53,7 @@ public class GameManager : MonoBehaviour
 
             prefabs.Add(this.nextNextLvl);
             deleteTableOld();
+            activeTablesCurrenet();
             /*
             this.nextNextLvl.GetComponent<TableKey>().isActive = false;
             prefabs[1].GetComponent<TableKey>().isActive = true;
@@ -75,6 +76,13 @@ public class GameManager : MonoBehaviour
     public void generateTableRoots()
     {
 
+    }
+
+    public void activeTablesCurrenet()
+    {
+        prefabs[0].GetComponent<TableKey>().isActive = false;
+        prefabs[1].GetComponent<TableKey>().isActive = true;
+        prefabs[2].GetComponent<TableKey>().isActive = false;
     }
 
 
