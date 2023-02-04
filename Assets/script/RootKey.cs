@@ -9,18 +9,21 @@ public class RootKey : MonoBehaviour
     public bool isRoot = false;
     public bool isUpRoot = false;
 
+    private TableKey tableKey;
+
+
 
     private SpriteRenderer sprite;
     void Start()
     {
+        tableKey = transform.parent.GetComponent<TableKey>();
         sprite = this.GetComponent<SpriteRenderer>();
         sprintDefault();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(key))
+        if (Input.GetKeyDown(key) && tableKey.isActive)
         {
             if (isRoot)
             {
@@ -37,9 +40,9 @@ public class RootKey : MonoBehaviour
     void upRoot()
     {
         forceRoot--;
+        Debug.Log(forceRoot);
         sprite.sprite = GameManager.instance.spriteRoot2;
 
-        Debug.Log(forceRoot);
         if (forceRoot == 0)
         {
             sprite.sprite = GameManager.instance.spriteUpRoot;
@@ -64,4 +67,7 @@ public class RootKey : MonoBehaviour
         sprite.sprite = GameManager.instance.spriteVoid;
 
     }
+
+
+
 }
