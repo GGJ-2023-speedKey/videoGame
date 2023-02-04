@@ -53,7 +53,7 @@ public class GameManager : MonoBehaviour
     public void generateTableRoots()
     {
         this.positionLvl += vectorDeltaLvl;
-        camera.transform.position = Vector3.Lerp(camera.transform.position, camera.transform.position + vectorDeltaLvl, speedCamera);
+        //camera.transform.position = Vector3.Lerp(camera.transform.position, camera.transform.position + vectorDeltaLvl, speedCamera);
 
         this.nextNextLvl = this.generateLvl.generateLvl(lvl, positionLvl + Vector3.forward);
 
