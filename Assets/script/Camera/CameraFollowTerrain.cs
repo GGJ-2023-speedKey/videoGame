@@ -7,18 +7,17 @@ public class CameraFollowTerrain : MonoBehaviour
     [SerializeField] private GameObject _focusObj;
 
 
-    public void CameraMove(Vector2 pos)
+    public void CameraMove(Vector3 pos)
     {
-        _focusObj.transform.position = pos;
-        StartCoroutine(StarCameraMove());
+        StartCoroutine(StarCameraMove(pos));
     }
 
-    IEnumerator StarCameraMove()
+    IEnumerator StarCameraMove(Vector3 pos)
     {
         float t = 0;
         Vector2 starPos = _focusObj.transform.position;
-        Vector2 endPos = Vector2.zero;
-        while (t >= 1)
+        Vector2 endPos = pos;
+        while (t < 1)
         {
             t += Time.deltaTime;
             _focusObj.transform.position = Vector2.Lerp(starPos,endPos,t);
