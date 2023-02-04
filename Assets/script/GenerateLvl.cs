@@ -25,7 +25,7 @@ public class GenerateLvl : MonoBehaviour
         current = (GameObject)Instantiate(gameObject, positionLvl, Quaternion.identity); ;
         Transform[] rows = current.GetComponentsInChildren<Transform>();
         int nRoots = getNRootsForLvl(GameManager.instance.lvl);
-        current.GetComponent<TableKey>().nRoots = nRoots;
+        current.GetComponent<TableKey>().nRoots = nRoots + 1;
         List<int> listPosRoots = getKeysRoots(nRoots, rows.Length);
 
         foreach (int i in listPosRoots)

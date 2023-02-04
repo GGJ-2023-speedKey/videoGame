@@ -17,7 +17,9 @@ public class TableKey : MonoBehaviour
     {
         if (nRoots == 0 && isActive)
         {
+            Debug.Log(gameObject.name);
             GameManager.instance.generateTableRoots();
+            isActive = false;
         }
     }
 }
