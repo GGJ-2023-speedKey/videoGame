@@ -4932,15 +4932,16 @@ MonoBehaviour:
   - {fileID: 3102072482633066414}
   - {fileID: 827175566326919106}
   - {fileID: 3102072483463697792}
-  spriteRoot: {fileID: 21300000, guid: 30daf30b314a13db480d04d929d1eada, type: 3}
-  spriteRoot2: {fileID: 21300000, guid: 821a1a0d8765f5a838fccd5583f19d66, type: 3}
+  spriteRoot: {fileID: 21300000, guid: 368dc5879f3275dd1a31e1fbe261654e, type: 3}
+  spriteRoot2: {fileID: 21300000, guid: e9b7b35c763db4406b7470eeb2d5b6cc, type: 3}
   spriteVoid: {fileID: 21300000, guid: 117a6f1dc1e60cfabaeb8b393033f4c8, type: 3}
-  spriteError: {fileID: 21300000, guid: b39982bc32be0031697f06ff28bf8bb3, type: 3}
+  spriteError: {fileID: 21300000, guid: 117a6f1dc1e60cfabaeb8b393033f4c8, type: 3}
   spriteUpRoot: {fileID: 21300000, guid: 33e3af12602f98aa8bd347a83397ab84, type: 3}
   gameObjectGenerateLvl: {fileID: 3102072483049970839}
   speedCamera: 2
   isGameplay: 0
   camera: {fileID: 0}
+  _cameraFollowTerrain: {fileID: 0}
   lvl: 2
 --- !u!1 &3102072482527355174
 GameObject:
