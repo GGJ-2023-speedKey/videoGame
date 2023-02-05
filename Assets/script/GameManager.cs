@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
     {
         this.currentTable = prefabs[3];
         currentTable.GetComponent<TableKey>().isActive = true;
+        currentTable.GetComponent<TableKey>().StartCoroutine(currentTable.GetComponent<TableKey>().delay());
         TimeController.instance.addTime();
 
     }
