@@ -39,8 +39,12 @@ public class AudioManager : MonoBehaviour
         switch (audioType)
         {
             case EnumAudioType.SACAR_TRONCO:
-                _audioSourceFsx.clip = _sacarTronco;
-                _audioSourceFsx.Play();
+
+                if (!_audioSourceMusic.mute)
+                {
+                    _audioSourceFsx.clip = _sacarTronco;
+                    _audioSourceFsx.Play();
+                }
                 break;
         }
     }

@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeExtra: 3
-  timeLeft: 60
+  timeLeft: 15
   textMesh: {fileID: 768926734}
 --- !u!114 &768926734
 MonoBehaviour:
@@ -1952,7 +1952,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'El espacio centrado representa tu teclado preciona
+  m_text: 'El espacio centrado representa tu teclado, preciona
 
     la tecla adecuada
     para sacar la raiz'
@@ -1982,7 +1982,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36.2
+  m_fontSize: 35.8
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

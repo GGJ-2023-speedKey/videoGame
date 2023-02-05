@@ -8,13 +8,13 @@ public class AudioController : MonoBehaviour
     public Image button;
     public Sprite mute;
     public Sprite volume;
-    public AudioSource audioSource;
+    private AudioSource audioSource;
 
 
 
     private void Start()
     {
-        audioSource = FindObjectOfType<AudioSource>();
+        audioSource = FindObjectOfType<AudioManager>()._audioSourceMusic;
 
         if (audioSource.mute)
         {

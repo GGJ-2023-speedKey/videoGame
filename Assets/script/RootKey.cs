@@ -61,6 +61,7 @@ public class RootKey : MonoBehaviour
 
         if (forceRoot > 0)
         {
+            FindObjectOfType<AudioManager>().PlaySound(EnumAudioType.SACAR_TRONCO);
             forceRoot--;
         }
         sprite.sprite = GameManager.instance.spriteRoot2;
