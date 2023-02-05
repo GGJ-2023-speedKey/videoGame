@@ -9,7 +9,7 @@ public class TimeController : MonoBehaviour
     public float TimeExtra;
     public float timeLeft;
 
-    private TextMeshPro textMesh;
+    public TMP_Text textMesh;
     private bool isActive = true;
     private void Awake()
     {
@@ -17,12 +17,6 @@ public class TimeController : MonoBehaviour
         {
             instance = this;
         }
-    }
-
-    void Start()
-    {
-        textMesh = GetComponent<TextMeshPro>();
-
     }
 
     void Update()

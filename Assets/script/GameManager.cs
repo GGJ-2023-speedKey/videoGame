@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
     private Vector3 positionLvl;
     private GameObject nextNextLvl;
 
-    private Vector3 vectorDeltaLvl = new Vector3(0, 7, 0);
+    private Vector3 vectorDeltaLvl = new Vector3(0, 8, 0);
 
 
 
@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     {
         this.generateLvl = gameObjectGenerateLvl.GetComponent<GenerateLvl>();
         this.positionLvl = transform.position;
-        this.positionLvl += new Vector3(0, 7, 0);
+        this.positionLvl += new Vector3(0, 9, 0);
 
     }
 
