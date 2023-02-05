@@ -15,7 +15,7 @@ public class TableKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (nRoots == 0 && isActive)
+        if (nRoots <= 0 && isActive)
         {
             Debug.Log(gameObject.name);
             GameManager.instance.generateTableRoots();

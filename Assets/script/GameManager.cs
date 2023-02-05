@@ -77,6 +77,7 @@ public class GameManager : MonoBehaviour
     {
         this.currentTable = prefabs[3];
         currentTable.GetComponent<TableKey>().isActive = true;
+        TimeController.instance.addTime();
 
     }
 

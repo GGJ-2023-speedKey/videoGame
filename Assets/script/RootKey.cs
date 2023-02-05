@@ -8,7 +8,7 @@ public class RootKey : MonoBehaviour
     public KeyCode key;
     public bool isRoot = false;
     public bool isUpRoot = false;
-
+    private bool isActive = true;
     private TableKey tableKey;
 
 
@@ -23,17 +23,28 @@ public class RootKey : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(key) && tableKey.isActive)
+        if (tableKey.isActive)
         {
-            if (isRoot)
+            if (!isActive)
+                sprintDefault();
+
+            if (Input.GetKeyDown(key))
             {
-                upRoot();
+                if (isRoot)
+                {
+                    upRoot();
+                }
+                else
+                {
+                    if (isUpRoot) return;
+                    keyError();
+                }
             }
-            else
-            {
-                if (isUpRoot) return;
-                keyError();
-            }
+        }
+        else if (!tableKey.isActive)
+        {
+            isActive = false;
+            sprite.sprite = GameManager.instance.spriteError;
         }
     }
 
@@ -48,14 +59,13 @@ public class RootKey : MonoBehaviour
         }
         sprite.sprite = GameManager.instance.spriteRoot2;
 
-        if (forceRoot == 0)
+        if (forceRoot <= 0)
         {
             sprite.sprite = GameManager.instance.spriteUpRoot;
             transform.parent.GetComponent<TableKey>().nRoots--;
             GameManager.instance.numRoot++;
             this.isUpRoot = true;
             this.isRoot = false;
-            TimeController.instance.addTime();
         }
         if (isUpRoot) return;
         Invoke("sprintDefault", 0.1f);
@@ -68,7 +78,7 @@ public class RootKey : MonoBehaviour
     }
     void sprintDefault()
     {
-
+        isActive = true;
         if (isRoot) { sprite.sprite = GameManager.instance.spriteRoot; return; }
         if (isUpRoot) { sprite.sprite = GameManager.instance.spriteRoot; return; }
 

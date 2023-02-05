@@ -39,7 +39,9 @@ public class CloudSpawn : MonoBehaviour
 
     IEnumerator SpawnClouds()
     {
-        while (!GameManager.instance.finishGame)
+        bool finishMove = false;
+
+        while (!finishMove)
         {
             float posY = Random.RandomRange(_posDown.position.y, _posUp.position.y);
 
@@ -50,6 +52,10 @@ public class CloudSpawn : MonoBehaviour
             newCloud.GetComponent<CloudBehabiour>()._isRight = _isRight;
 
             yield return new WaitForSeconds(5f);
+
+            if (GameManager.instance != null)
+                finishMove = GameManager.instance.finishGame;
+
         }
 
     }

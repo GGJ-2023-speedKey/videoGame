@@ -551,7 +551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bc23989df5606a39b9fd5129a7012cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeExtra: 1
+  TimeExtra: 3
   timeLeft: 20
   textMesh: {fileID: 768926734}
 --- !u!114 &768926734
@@ -1031,7 +1031,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 378800016808561638, guid: 112e76dc041cc4d148c124c45cebda14, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 378800016808561638, guid: 112e76dc041cc4d148c124c45cebda14, type: 3}
       propertyPath: m_AnchorMax.x
