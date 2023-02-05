@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public GameObject finalMenu;
     public bool finishGame = false;
 
+    public bool finishTutorial = false;
+    public GameObject tutorial;
+
     public int numRoot = 0;
     public TMP_Text textNumberRoots;
 

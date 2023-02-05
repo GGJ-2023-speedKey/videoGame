@@ -28,7 +28,7 @@ public class CloudSpawn : MonoBehaviour
 
             var _cloud = _cloudRight;
 
-            var newCloud = Instantiate(_cloud, new Vector3(transform.position.x, posY, transform.position.z), Quaternion.identity);
+            GameObject newCloud = Instantiate(_cloud, new Vector3(transform.position.x, posY, transform.position.z), Quaternion.identity);
 
             newCloud.GetComponent<CloudBehabiour>()._isRight = _isRight;
 
@@ -45,9 +45,7 @@ public class CloudSpawn : MonoBehaviour
         {
             float posY = Random.RandomRange(_posDown.position.y, _posUp.position.y);
 
-            var _cloud = _cloudRight;
-
-            var newCloud = Instantiate(_cloud, new Vector3(transform.position.x, posY, transform.position.z), Quaternion.identity);
+            GameObject newCloud = Instantiate(_cloudRight, new Vector3(transform.position.x, posY, transform.position.z), Quaternion.identity);
 
             newCloud.GetComponent<CloudBehabiour>()._isRight = _isRight;
 

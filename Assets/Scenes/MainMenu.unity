@@ -636,7 +636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSourceFsx: {fileID: 0}
   _audioSourceMusic: {fileID: 1117168545}
-  _music: {fileID: 8300000, guid: 40d24652870787047ae2d6b1a986c8ae, type: 3}
+  _music: {fileID: 8300000, guid: 4af9b623e539e894ea7cb025d415a4d7, type: 3}
   _sacarTronco: {fileID: 0}
 --- !u!82 &1117168545
 AudioSource:
@@ -650,7 +650,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.456
+  m_Volume: 0.086
   m_Pitch: 1
   Loop: 1
   Mute: 0

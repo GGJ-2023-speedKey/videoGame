@@ -5,6 +5,7 @@ using UnityEngine;
 public class TableKey : MonoBehaviour
 {
     public bool isActive = false;
+    public bool TableClean = false;
     public int nRoots;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class TableKey : MonoBehaviour
             Debug.Log(gameObject.name);
             GameManager.instance.generateTableRoots();
             isActive = false;
+            TableClean = true;
         }
     }
 }

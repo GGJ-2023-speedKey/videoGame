@@ -401,6 +401,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
+  TableClean: 0
   nRoots: 1
 --- !u!1 &827175566342209914
 GameObject:
@@ -4151,6 +4152,7 @@ MonoBehaviour:
   _posUp: {fileID: 6703033634780500376}
   _cloudRight: {fileID: 7109534594804819856, guid: 6f1f81b29874c4f4aab7a2d132a55392, type: 3}
   _isRight: 1
+  _isMainMenu: 0
 --- !u!61 &8358361763098283972
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4228,6 +4230,7 @@ MonoBehaviour:
   _posUp: {fileID: 4031964391022524283}
   _cloudRight: {fileID: 7109534594804819856, guid: 6f1f81b29874c4f4aab7a2d132a55392, type: 3}
   _isRight: 0
+  _isMainMenu: 0
 --- !u!61 &7491530285895422511
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4305,6 +4308,7 @@ MonoBehaviour:
   _posUp: {fileID: 2327404407820147214}
   _cloudRight: {fileID: 7109534594804819856, guid: 6f1f81b29874c4f4aab7a2d132a55392, type: 3}
   _isRight: 0
+  _isMainMenu: 0
 --- !u!61 &8213585371016623962
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6716,6 +6720,10 @@ MonoBehaviour:
   gameObjectGenerateLvl: {fileID: 3102072482012636822}
   finalMenu: {fileID: 0}
   finishGame: 0
+  finishTutorial: 0
+  tutorial: {fileID: 0}
+  numRoot: 0
+  textNumberRoots: {fileID: 0}
   _cameraFollowTerrain: {fileID: 0}
   currentTable: {fileID: 827175566326919106}
   lvl: 2
@@ -9902,6 +9910,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  TableClean: 0
   nRoots: 99
 --- !u!1 &3102072482764128099
 GameObject:
@@ -12262,6 +12271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  TableClean: 0
   nRoots: 2
 --- !u!1 &3102072483490231539
 GameObject:
@@ -12415,6 +12425,7 @@ MonoBehaviour:
   _posUp: {fileID: 4442386205654990741}
   _cloudRight: {fileID: 7109534594804819856, guid: 6f1f81b29874c4f4aab7a2d132a55392, type: 3}
   _isRight: 1
+  _isMainMenu: 0
 --- !u!61 &5789848602108078997
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12556,6 +12567,7 @@ MonoBehaviour:
   _posUp: {fileID: 5732668743876006978}
   _cloudRight: {fileID: 7109534594804819856, guid: 6f1f81b29874c4f4aab7a2d132a55392, type: 3}
   _isRight: 0
+  _isMainMenu: 0
 --- !u!61 &8518026748138061882
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -12697,6 +12709,7 @@ MonoBehaviour:
   _posUp: {fileID: 8345291380996448966}
   _cloudRight: {fileID: 7109534594804819856, guid: 6f1f81b29874c4f4aab7a2d132a55392, type: 3}
   _isRight: 1
+  _isMainMenu: 0
 --- !u!61 &1949428850801394269
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16451,6 +16464,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 0
+  TableClean: 0
   nRoots: 99
 --- !u!1 &7602518238829112469
 GameObject:

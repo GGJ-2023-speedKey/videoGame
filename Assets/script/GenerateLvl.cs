@@ -22,16 +22,16 @@ public class GenerateLvl : MonoBehaviour
 
     public GameObject generateLvl(int lvl, Vector3 positionLvl)
     {
-        current = (GameObject)Instantiate(gameObject, transform);
+        current = Instantiate(gameObject, transform);
         current.transform.position = positionLvl;
-        Transform[] rows = current.GetComponentsInChildren<Transform>();
+        RootKey[] rows = current.GetComponentsInChildren<RootKey>();
         int nRoots = getNRootsForLvl(GameManager.instance.lvl);
         current.GetComponent<TableKey>().nRoots = nRoots + 1;
         List<int> listPosRoots = getKeysRoots(nRoots, rows.Length);
 
         foreach (int i in listPosRoots)
         {
-            updateRootKey(rows[i], GameManager.instance.lvl);
+            updateRootKey(rows[i].transform, GameManager.instance.lvl);
 
         }
 

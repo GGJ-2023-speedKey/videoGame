@@ -23,7 +23,8 @@ public class TimeController : MonoBehaviour
     {
         if (isActive)
         {
-            timeLeft -= Time.deltaTime;
+            if (GameManager.instance.finishTutorial)
+                timeLeft -= Time.deltaTime;
 
             if (timeLeft < 0)
             {
@@ -41,6 +42,12 @@ public class TimeController : MonoBehaviour
 
     public void addTime()
     {
-        this.timeLeft += TimeExtra;
+        if (GameManager.instance.finishTutorial)
+            this.timeLeft += TimeExtra;
+        else
+        {
+            GameManager.instance.tutorial.SetActive(false);
+            GameManager.instance.finishTutorial = true;
+        }
     }
 }

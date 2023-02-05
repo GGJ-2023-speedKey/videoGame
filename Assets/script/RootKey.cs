@@ -26,7 +26,10 @@ public class RootKey : MonoBehaviour
         if (tableKey.isActive)
         {
             if (!isActive)
+            {
+                isActive = true;
                 sprintDefault();
+            }
 
             if (Input.GetKeyDown(key))
             {
@@ -41,11 +44,14 @@ public class RootKey : MonoBehaviour
                 }
             }
         }
-        else if (!tableKey.isActive)
+        else if (!tableKey.isActive && !tableKey.TableClean)
         {
             isActive = false;
             sprite.sprite = GameManager.instance.spriteError;
         }
+
+        if(forceRoot <= 0)
+            sprite.sprite = GameManager.instance.spriteUpRoot;
     }
 
     void upRoot()
@@ -78,7 +84,6 @@ public class RootKey : MonoBehaviour
     }
     void sprintDefault()
     {
-        isActive = true;
         if (isRoot) { sprite.sprite = GameManager.instance.spriteRoot; return; }
         if (isUpRoot) { sprite.sprite = GameManager.instance.spriteRoot; return; }
 
