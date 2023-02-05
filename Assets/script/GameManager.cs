@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public Sprite spriteRoot, spriteRoot2, spriteVoid, spriteError, spriteUpRoot;
     public GameObject gameObjectGenerateLvl;
 
+    public GameObject finalMenu;
+    public bool finishGame = false;
+
     public CameraFollowTerrain _cameraFollowTerrain;
 
     public GameObject currentTable;
@@ -76,6 +79,7 @@ public class GameManager : MonoBehaviour
     internal void gameOver()
     {
         Debug.Log("GameOver");
-        //TODO: GameOver
+        finalMenu.SetActive(true);
+        finishGame = true;
     }
 }

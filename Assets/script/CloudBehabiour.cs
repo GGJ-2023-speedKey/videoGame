@@ -12,12 +12,12 @@ public class CloudBehabiour : MonoBehaviour
 
     private void OnEnable()
     {
-        int index = Random.Range(0,sprites.Count);
-        int layer = Random.Range(-3,2);
+        int index = Random.Range(0, sprites.Count);
+        int layer = Random.Range(-3, 2);
 
         GetComponent<SpriteRenderer>().sprite = sprites[index];
 
-        GetComponent<SpriteRenderer>().sortingOrder = layer; 
+        GetComponent<SpriteRenderer>().sortingOrder = layer;
 
 
 
@@ -29,13 +29,17 @@ public class CloudBehabiour : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         velocity = _isRight ? velocity * -1 : velocity;
+        bool finishMove = false;
 
-        while (true)
+        while (!finishMove)
         {
             yield return new WaitForFixedUpdate();
 
 
             transform.Translate(Vector3.right * velocity);
+
+            if (GameManager.instance != null)
+                finishMove = GameManager.instance.finishGame;
 
         }
 

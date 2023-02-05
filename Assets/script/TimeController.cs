@@ -24,14 +24,18 @@ public class TimeController : MonoBehaviour
         if (isActive)
         {
             timeLeft -= Time.deltaTime;
-            int minutes = (int)timeLeft / 60;
-            int seconds = (int)timeLeft % 60;
-            textMesh.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+
             if (timeLeft < 0)
             {
                 GameManager.instance.gameOver();
                 isActive = false;
+                timeLeft = 0;
             }
+
+            int minutes = (int)timeLeft / 60;
+            int seconds = (int)timeLeft % 60;
+            textMesh.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+
         }
     }
 

@@ -8,16 +8,19 @@ public class CloudSpawn : MonoBehaviour
     public Transform _posUp;
     public GameObject _cloudRight;
     public bool _isRight;
+    public bool _isMainMenu;
 
 
-    private void Start()
+    private void OnEnable()
     {
-        StartCoroutine(SpawnClouds());
+        if (_isMainMenu)
+            StartCoroutine(SpawnCloudsInMainMenu());
+        else
+            StartCoroutine(SpawnClouds());
     }
 
 
-
-    IEnumerator SpawnClouds()
+    IEnumerator SpawnCloudsInMainMenu()
     {
         while (true)
         {
@@ -29,7 +32,24 @@ public class CloudSpawn : MonoBehaviour
 
             newCloud.GetComponent<CloudBehabiour>()._isRight = _isRight;
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(5f);
+        }
+
+    }
+
+    IEnumerator SpawnClouds()
+    {
+        while (!GameManager.instance.finishGame)
+        {
+            float posY = Random.RandomRange(_posDown.position.y, _posUp.position.y);
+
+            var _cloud = _cloudRight;
+
+            var newCloud = Instantiate(_cloud, new Vector3(transform.position.x, posY, transform.position.z), Quaternion.identity);
+
+            newCloud.GetComponent<CloudBehabiour>()._isRight = _isRight;
+
+            yield return new WaitForSeconds(5f);
         }
 
     }
