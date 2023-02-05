@@ -51,6 +51,7 @@ public class RootKey : MonoBehaviour
             transform.parent.GetComponent<TableKey>().nRoots--;
             this.isUpRoot = true;
             this.isRoot = false;
+            TimeController.instance.addTime();
         }
         if (isUpRoot) return;
         Invoke("sprintDefault", 0.1f);
