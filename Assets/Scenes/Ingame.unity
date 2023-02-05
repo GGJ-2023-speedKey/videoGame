@@ -553,7 +553,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TimeExtra: 3
-  timeLeft: 20
+  timeLeft: 60
   textMesh: {fileID: 768926734}
 --- !u!114 &768926734
 MonoBehaviour:
@@ -602,7 +602,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50.75
+  m_fontSize: 48.4
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1582,6 +1582,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 906509854}
     - target: {fileID: 817836619871865247, guid: b731cad2b37f184b4aaa793f5418b430, type: 3}
+      propertyPath: spriteErro
+      value: 
+      objectReference: {fileID: 21300000, guid: dd3f658607caac3c89dca7a819084c04, type: 3}
+    - target: {fileID: 817836619871865247, guid: b731cad2b37f184b4aaa793f5418b430, type: 3}
+      propertyPath: spriteRoot2
+      value: 
+      objectReference: {fileID: 21300000, guid: 085247982a60f61cf8efadb38446c23f, type: 3}
+    - target: {fileID: 817836619871865247, guid: b731cad2b37f184b4aaa793f5418b430, type: 3}
+      propertyPath: currentTable
+      value: 
+      objectReference: {fileID: 1662440779451941142, guid: 5399a0903fac4ef909d7b475ec16c5bb, type: 3}
+    - target: {fileID: 817836619871865247, guid: b731cad2b37f184b4aaa793f5418b430, type: 3}
+      propertyPath: spriteDisable
+      value: 
+      objectReference: {fileID: 21300000, guid: 117a6f1dc1e60cfabaeb8b393033f4c8, type: 3}
+    - target: {fileID: 817836619871865247, guid: b731cad2b37f184b4aaa793f5418b430, type: 3}
       propertyPath: textNumberRoots
       value: 
       objectReference: {fileID: 1319164296}
@@ -1966,7 +1982,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.4
+  m_fontSize: 36.2
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1

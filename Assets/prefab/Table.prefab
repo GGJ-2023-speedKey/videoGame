@@ -3672,7 +3672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forceRoot: 5
   key: 104
-  isRoot: 1
+  isRoot: 0
   isUpRoot: 0
 --- !u!1 &1662440780632619934
 GameObject:

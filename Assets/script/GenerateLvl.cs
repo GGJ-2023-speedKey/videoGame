@@ -26,7 +26,7 @@ public class GenerateLvl : MonoBehaviour
         current.transform.position = positionLvl;
         RootKey[] rows = current.GetComponentsInChildren<RootKey>();
         int nRoots = getNRootsForLvl(GameManager.instance.lvl);
-        current.GetComponent<TableKey>().nRoots = nRoots + 1;
+        current.GetComponent<TableKey>().nRoots = nRoots;
         List<int> listPosRoots = getKeysRoots(nRoots, rows.Length);
 
         foreach (int i in listPosRoots)

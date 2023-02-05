@@ -1,15 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
     public List<GameObject> prefabs;
-    public Sprite spriteRoot, spriteRoot2, spriteVoid, spriteError, spriteUpRoot;
+    public Sprite spriteRoot, spriteRoot2, spriteVoid, spriteDisable, spriteUpRoot, spriteErro;
     public GameObject gameObjectGenerateLvl;
 
     public GameObject finalMenu;

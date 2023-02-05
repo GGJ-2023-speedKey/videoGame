@@ -47,10 +47,10 @@ public class RootKey : MonoBehaviour
         else if (!tableKey.isActive && !tableKey.TableClean)
         {
             isActive = false;
-            sprite.sprite = GameManager.instance.spriteError;
+            sprite.sprite = GameManager.instance.spriteDisable;
         }
 
-        if(forceRoot <= 0)
+        if (forceRoot <= 0)
             sprite.sprite = GameManager.instance.spriteUpRoot;
     }
 
@@ -79,7 +79,7 @@ public class RootKey : MonoBehaviour
 
     void keyError()
     {
-        sprite.sprite = GameManager.instance.spriteError;
+        sprite.sprite = GameManager.instance.spriteErro;
         Invoke("sprintDefault", 0.1f);
     }
     void sprintDefault()
