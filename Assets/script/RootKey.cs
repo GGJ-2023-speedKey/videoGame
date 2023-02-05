@@ -39,6 +39,9 @@ public class RootKey : MonoBehaviour
 
     void upRoot()
     {
+        if (GameManager.instance.finishGame)
+            return;
+
         if (forceRoot > 0)
         {
             forceRoot--;
@@ -49,6 +52,7 @@ public class RootKey : MonoBehaviour
         {
             sprite.sprite = GameManager.instance.spriteUpRoot;
             transform.parent.GetComponent<TableKey>().nRoots--;
+            GameManager.instance.numRoot++;
             this.isUpRoot = true;
             this.isRoot = false;
             TimeController.instance.addTime();

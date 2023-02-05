@@ -3,7 +3,7 @@ using UnityEngine;
 
 public enum EnumAudioType
 {
-SACAR_TRONCO,
+    SACAR_TRONCO,
 }
 
 
@@ -18,7 +18,10 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (FindObjectsOfType<AudioManager>().Length > 1)
+            Destroy(this);
+        else
+            DontDestroyOnLoad(gameObject);
     }
 
     private void Start()

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,6 +14,9 @@ public class GameManager : MonoBehaviour
 
     public GameObject finalMenu;
     public bool finishGame = false;
+
+    public int numRoot = 0;
+    public TMP_Text textNumberRoots;
 
     public CameraFollowTerrain _cameraFollowTerrain;
 
@@ -79,6 +83,7 @@ public class GameManager : MonoBehaviour
     internal void gameOver()
     {
         Debug.Log("GameOver");
+        textNumberRoots.text = numRoot.ToString();
         finalMenu.SetActive(true);
         finishGame = true;
     }

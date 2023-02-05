@@ -1167,6 +1167,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 112e76dc041cc4d148c124c45cebda14, type: 3}
+--- !u!114 &1319164296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3098720718506275701, guid: 112e76dc041cc4d148c124c45cebda14, type: 3}
+  m_PrefabInstance: {fileID: 1319164295}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1322102741
 GameObject:
   m_ObjectHideFlags: 0
@@ -1565,6 +1576,10 @@ PrefabInstance:
       propertyPath: finalMenu
       value: 
       objectReference: {fileID: 906509854}
+    - target: {fileID: 817836619871865247, guid: b731cad2b37f184b4aaa793f5418b430, type: 3}
+      propertyPath: textNumberRoots
+      value: 
+      objectReference: {fileID: 1319164296}
     - target: {fileID: 817836619871865247, guid: b731cad2b37f184b4aaa793f5418b430, type: 3}
       propertyPath: _cameraFollowTerrain
       value: 
